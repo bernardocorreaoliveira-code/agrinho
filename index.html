@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroEco Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🌱 AgroEco Hub
+</div>
+
+<nav>
+
+<a href="#inicio">Início</a>
+<a href="#artigos">Artigos</a>
+<a href="#plantas">Plantas</a>
+<a href="#cursos">Cursos</a>
+<a href="#forum">Fórum</a>
+
+</nav>
+
+<button id="darkModeBtn">
+🌙
+</button>
+
+</header>
+
+<section id="inicio" class="hero">
+
+<div class="hero-content">
+
+<h1>
+Banco de Conhecimento Agroecológico
+</h1>
+
+<p>
+Aprenda agricultura sustentável, encontre plantas nativas, descubra soluções naturais para pragas e compartilhe experiências.
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="Pesquisar conteúdo..."
+>
+
+<button>
+Pesquisar
+</button>
+
+</div>
+
+<div class="stats">
+
+<div>
+<h2>500+</h2>
+<p>Artigos</p>
+</div>
+
+<div>
+<h2>120</h2>
+<p>Cursos</p>
+</div>
+
+<div>
+<h2>3000+</h2>
+<p>Agricultores</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="artigos">
+
+<h2>Artigos em Destaque</h2>
+
+<div class="grid">
+
+<div class="article-card">
+<img src="https://picsum.photos/400/250?1">
+<h3>Rotação de Culturas</h3>
+<p>Como reduzir doenças e melhorar a fertilidade do solo.</p>
+<button>Ler Artigo</button>
+</div>
+
+<div class="article-card">
+<img src="https://picsum.photos/400/250?2">
+<h3>Compostagem Orgânica</h3>
+<p>Produza adubo sustentável para sua propriedade.</p>
+<button>Ler Artigo</button>
+</div>
+
+<div class="article-card">
+<img src="https://picsum.photos/400/250?3">
+<h3>Agroflorestas</h3>
+<p>Integração entre árvores e produção agrícola.</p>
+<button>Ler Artigo</button>
+</div>
+
+</div>
+
+</section>
+
+<section id="plantas">
+
+<h2>Biblioteca de Plantas Nativas</h2>
+
+<div class="plant-grid">
+
+<div class="plant-card" onclick="mostrarPlanta('Araucária')">
+🌲
+<h3>Araucária</h3>
+</div>
+
+<div class="plant-card" onclick="mostrarPlanta('Erva-Mate')">
+🍃
+<h3>Erva-Mate</h3>
+</div>
+
+<div class="plant-card" onclick="mostrarPlanta('Ipê-Amarelo')">
+🌼
+<h3>Ipê-Amarelo</h3>
+</div>
+
+<div class="plant-card" onclick="mostrarPlanta('Jabuticabeira')">
+🫐
+<h3>Jabuticabeira</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="cursos">
+
+<h2>Cursos Gratuitos</h2>
+
+<div class="course-container">
+
+<div class="course-card">
+<h3>Introdução à Agroecologia</h3>
+<p>4 horas</p>
+<div class="progress">
+<div style="width:70%"></div>
+</div>
+</div>
+
+<div class="course-card">
+<h3>Controle Biológico</h3>
+<p>6 horas</p>
+<div class="progress">
+<div style="width:45%"></div>
+</div>
+</div>
+
+<div class="course-card">
+<h3>Permacultura</h3>
+<p>10 horas</p>
+<div class="progress">
+<div style="width:90%"></div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Controle Biológico de Pragas</h2>
+
+<div class="pragas">
+
+<div class="praga">
+🐞 Joaninhas
+<p>Controle natural de pulgões.</p>
+</div>
+
+<div class="praga">
+🕷 Predadores Naturais
+<p>Redução de insetos invasores.</p>
+</div>
+
+<div class="praga">
+🍄 Fungos Benéficos
+<p>Combate sustentável a doenças.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="forum">
+
+<h2>Fórum dos Agricultores</h2>
+
+<div class="forum">
+
+<input
+type="text"
+id="usuario"
+placeholder="Seu nome"
+>
+
+<textarea
+id="texto"
+placeholder="Compartilhe uma experiência..."
+></textarea>
+
+<button onclick="criarPost()">
+Publicar
+</button>
+
+<div id="posts"></div>
+
+</div>
+
+</section>
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<span onclick="fecharModal()">
+×
+</span>
+
+<h2 id="modalTitulo"></h2>
+
+<p id="modalTexto"></p>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+© 2026 AgroEco Hub
+</p>
+
+</footer>
+
+</body>
+</html>
